@@ -1,0 +1,50 @@
+﻿@model Epione.Domain.Entities.Appointment
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4> Appointment  with Dr.<b>@Session["nameDoctor"]</b></h4>
+        <hr />
+        <dl class="dl-horizontal">
+           
+
+            <dt>
+                The date 
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.date) at @Html.DisplayFor(model => model.time)
+
+            </dd>
+
+            <dt>
+                The object
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.objectAppointment)
+            </dd>
+
+            <dt>
+                Message
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.message)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.AppointmentId }) |
+        @Html.ActionLink("Back to my appointments", "Index3") 
+    </p>
+</body>
+</html>
